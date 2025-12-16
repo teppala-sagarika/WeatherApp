@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './Searchbox.css';
 
-export default function Searchbox(){
+export default function Searchbox({updateInfo}){
     let [city,setCity]=useState("");
     const API_URL="https://api.openweathermap.org/data/2.5/weather";
     const API_KEY=import.meta.env.VITE_API_KEY;
@@ -21,16 +21,21 @@ export default function Searchbox(){
             weather: jsonResponse.weather[0].description,
         };
         console.log(result);
+        return result;
     }
+
     let handleChange=(event)=>{
         setCity(event.target.value);
     }
-    let handleSubmit=(event)=>{
+
+    let handleSubmit=async (event)=>{
         event.preventDefault();
         console.log(city);
         setCity("");
-        generateWeatherData();
+        let info = await generateWeatherData();
+        updateInfo(info);
     }
+
     return (<>
     <div className="searchBox">
         <form onSubmit={handleSubmit}>
