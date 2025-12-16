@@ -33,7 +33,6 @@ export default function Searchbox(){
     }
     return (<>
     <div className="searchBox">
-        <h3>Search for the weather</h3>
         <form onSubmit={handleSubmit}>
             <TextField id="city" label="City Name" variant="outlined" value={city} onChange={handleChange} required/>
             <br/><br/>

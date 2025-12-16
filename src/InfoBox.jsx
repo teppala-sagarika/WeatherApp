@@ -16,7 +16,7 @@ export default function InfoBox(){
     };
     return (
         <div className="InfoBox">
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345 }} className='infocard'>
       <CardMedia
         sx={{ height: 140 }}
         image={IMG_URL}
