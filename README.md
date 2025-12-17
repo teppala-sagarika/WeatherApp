@@ -48,7 +48,7 @@ src/
 
 Create a `.env` file in the root directory and add:
 
-```env
+env
 VITE_API_KEY=your_openweathermap_api_key
 
 ---
@@ -92,13 +92,13 @@ Images and icons update automatically based on these conditions.
 ## 📸 Screenshots
 
 ### 🏠 Hot Weather Result
-![HotWeather](screenshots/HotWeather.png)
+![HotWeather](./screenshots/HotWeather.png)
 
 ### 🔍 Cool Weather Result
-![CoolWeather](screenshots/CoolWeather.png)
+![CoolWeather](./screenshots/CoolWeather.png)
 
 ### ⛈️ Rainy Weather Result
-![RainyWeather](screenshots/RainyWeather.png)
+![RainyWeather](./screenshots/RainyWeather.png)
 
 ---
 
