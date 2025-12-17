@@ -1,16 +1,116 @@
-# React + Vite
+# 🌦️ Weather App (React + Material UI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive **Weather Application** built using **React** and **Material UI** that fetches real-time weather data from the **OpenWeatherMap API**.  
+The app dynamically updates weather details, images, and icons based on temperature and humidity.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🔍 Search weather by **city name**
+- 🌡️ Displays:
+  - Current temperature
+  - Minimum & maximum temperature
+  - Humidity
+  - Weather description
+  - “Feels like” temperature
+- 🖼️ Dynamic background images based on weather conditions
+- 🌤️ Weather-based icons (Sunny / Cold / Rainy)
+- ⚠️ Error handling for invalid city names
+- 🎨 UI using **Material UI**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React (Vite)
+- **UI Library:** Material UI (MUI)
+- **API:** OpenWeatherMap API
+- **Styling:** CSS
+- **Icons:** MUI Icons
+
+---
+
+## 📁 Project Structure
+
+src/
+├── App.jsx
+├── WeatherApp.jsx
+├── Searchbox.jsx
+├── InfoBox.jsx
+├── Searchbox.css
+├── InfoBox.css
+└── main.jsx
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+VITE_API_KEY=your_openweathermap_api_key
+
+---
+
+## 🚀 How to Run the Project
+
+1.Clone the repository
+
+git clone https://github.com/your-username/weather-app.git
+
+2.Navigate to the project folder
+
+cd weather-app
+
+3.Install dependencies
+
+npm install
+
+4.Start the development server
+
+npm run dev
+
+5.Open in browser:
+
+http://localhost:5173
+
+---
+
+##🧠 Weather Image & Icon Logic
+
+⛈️ Rainy: Humidity > 80%
+
+☀️ Hot: Temperature > 14°C
+
+❄️ Cold: Temperature ≤ 14°C
+
+Images and icons update automatically based on these conditions.
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Hot Weather Result
+![HotWeather](screenshots/HotWeather.png)
+
+### 🔍 Cool Weather Result
+![CoolWeather](screenshots/CoolWeather.png)
+
+### ⛈️ Rainy Weather Result
+![RainyWeather](screenshots/RainyWeather.png)
+
+---
+
+## 🙌 Acknowledgements
+
+OpenWeatherMap API
+
+Material UI
+
+Unsplash for weather images
+
+---
+
+💙 Author
+- Sagarika 
